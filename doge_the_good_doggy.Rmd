@@ -1,5 +1,5 @@
 ---
-title: "Doge The Good Dogy"
+title: "Doge The Good Doggy"
 author: "The Moon Squad"
 date: "10/3/2021"
 output:
