@@ -14,3 +14,43 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Importing Libraries
+```{r importing_libraries}
+options("install.lock"=FALSE)
+library(rtweet)
+library(ggplot2)
+library(dplyr, warn.conflicts = FALSE)
+options(dplyr.summarise.inform = FALSE)
+suppressPackageStartupMessages(library(tidyverse)) 
+library(lubridate, warn.conflicts = FALSE)
+library(tibble)
+library(tidyverse)
+```
+
+# Twitter API Authentication
+```{r Authenticate}
+# First we get the keys from the environment variables which were stores utilizing secrets_ignore
+API_KEY = Sys.getenv("API_KEY")
+API_KEY_SECRET = Sys.getenv("API_KEY_SECRET")
+ACCESS_TOKEN = Sys.getenv("ACCESS_TOKEN")
+ACCESS_TOKEN_SECRET = Sys.getenv("ACCESS_TOKEN_SECRET")
+
+# Use the Keys to authenticate
+ token <- create_token(
+  app = "GGU-MSBA324",
+   consumer_key = API_KEY,
+   consumer_secret = API_KEY_SECRET,
+   access_token = ACCESS_TOKEN,
+   access_secret = ACCESS_TOKEN_SECRET)
+```
+
+## Get Tweets
+```{r get_tweets}
+# doge_tweets = get_timelines(c("dogecoin", "Shibtoken"),
+#                             n = 3200)
+# write_as_csv(doge_tweets, "doge.csv")
+```
+
+
